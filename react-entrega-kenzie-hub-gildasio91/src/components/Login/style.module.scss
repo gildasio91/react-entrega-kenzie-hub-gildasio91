@@ -1,0 +1,98 @@
+body {
+  height: 100vh;
+  font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--grey-4, #121214);
+  margin-block: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  section {
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+    display: flex;
+    padding: 2.10569rem 1.103rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.20056rem;
+    background: var(--grey-3, #212529);
+    box-shadow: 0px 3.209px 32.087px -8.022px rgba(0, 0, 0, 0.25);
+  
+    form {
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: start;
+  
+      gap: 1rem;
+  
+      h1 {
+        color: var(--grey-0, #f8f9fa);
+        font-size: 0.90244rem;
+        font-style: normal;
+        font-weight: 700;
+        height: 1.40381rem;
+        text-align: center;
+      }
+  
+      p {
+        width: 8.52306rem;
+        height: 0.90244rem;
+        color: var(--grey-1, #868e96);
+        font-size: 0.60163rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 0.90244rem;
+      }
+    }
+  }
+}
+
+h2 {
+  color: var(--color-primary);
+}
+
+.btn__login {
+  display: flex;
+  width: 16.24388rem;
+  height: 2.4065rem;
+  padding: 0rem 1.39588rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6345rem;
+  border-radius: 0.25381rem;
+  border: 1.218px solid var(--color-primary, #ff577f);
+  background: var(--color-primary, #ff577f);
+  color: #fff;
+  font-size: 0.80219rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.32331rem;
+}
+
+.btn__register {
+  display: flex;
+  width: 16.24388rem;
+  height: 2.4065rem;
+  padding: 0rem 1.39588rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6345rem;
+  border-radius: 0.25rem;
+  border: 1.218px solid var(--grey-1, #868e96);
+  background: var(--grey-1, #868e96);
+  color: var(--grey-0, #f8f9fa);
+  font-size: 0.80219rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.32331rem;
+}

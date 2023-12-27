@@ -1,0 +1,35 @@
+.inpt__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.inpt {
+  display: flex;
+  width: 16.54113rem;
+  height: 2.4065rem;
+  padding: 0rem 0.81431rem;
+  align-items: center;
+  gap: 0.50894rem;
+  border-radius: 0.20056rem;
+  border: 0.977px solid var(--grey-0, #f8f9fa);
+  background: var(--grey-2, #343b41);
+  color: var(--grey-50, #868E96);
+
+
+  
+font-size: 0.81169rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.31894rem; /* 162.5% */
+ 
+}
+
+label {
+  color: var(--grey-0, #f8f9fa);
+  font-size: 0.61075rem;
+  font-style: normal;
+  font-weight: 400;
+
+}
