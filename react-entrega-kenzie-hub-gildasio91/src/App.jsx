@@ -1,14 +1,12 @@
-import "./styles/index.scss"
-import { Login } from "./components/Login"
-import { Register } from "./components/Register"
-import { Dashboard } from "./components/Dashboard"
+import "./styles/index.scss";
+import { RouterMain } from "./router/RouterMain";
 
 function App() {
   return (
-    // <Login/>
-    // <Register />
-    <Dashboard />
-  )
+    <>
+      <RouterMain />
+    </>
+  );
 }
 
-export default App
+export default App;

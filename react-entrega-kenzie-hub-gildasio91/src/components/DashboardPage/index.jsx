@@ -1,12 +1,12 @@
-import styles from "../Dashboard/style.module.scss";
+import styles from "./style.module.scss";
 
-export const Dashboard = () => {
+export const DashboardPage = ({userLogout}) => {
   return (
-    <body className={styles.body__container}>
+    <div className={styles.body__container}>
       <header>
         <div>
           <h2>kenzie hub</h2>
-          <button type="submit">Sair</button>
+          <button onClick={userLogout} type="submit">Sair</button>
         </div>
       </header>
       <section>
@@ -23,6 +23,6 @@ export const Dashboard = () => {
           </h3>
         </div>
       </main>
-    </body>
+    </div>
   );
 };
