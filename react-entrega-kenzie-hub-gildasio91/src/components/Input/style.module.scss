@@ -8,6 +8,7 @@
 
   .paragraph {
     color: #a43a32;
+    font-size: 0.5rem;
   }
 
   label {
@@ -39,7 +40,7 @@
 ::placeholder {
   color: var(--grey-0, #f8f9fa);
   font-family: var(--font-primary);
-  font-size: 0.40106rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.32331rem; /* 329.929% */

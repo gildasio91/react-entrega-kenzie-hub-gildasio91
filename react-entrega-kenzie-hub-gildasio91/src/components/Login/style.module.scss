@@ -14,6 +14,11 @@
   align-items: center;
   margin: 0 auto;
 
+  img {
+    width: 6.3125rem;
+    height: 0.87519rem;
+  }
+
   section {
     width: 100%;
     margin-top: 1rem;
@@ -45,7 +50,6 @@
       }
 
       p {
-      
         height: 0.90244rem;
         color: var(--grey-1, #868e96);
         font-size: 0.60163rem;

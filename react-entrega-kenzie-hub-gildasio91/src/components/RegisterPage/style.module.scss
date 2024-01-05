@@ -7,7 +7,6 @@
   align-items: center;
   padding: 1rem;
   background: var(--grey-4, #121214);
- 
 }
 
 header {
@@ -16,12 +15,9 @@ header {
   justify-content: center;
   align-items: center;
 
-
   h2 {
     color: var(--color-primary);
   }
-
-
 }
 
 .btn__back {
@@ -45,13 +41,16 @@ header {
 }
 
 .div__header {
-    
   max-width: 16.5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-block: 1rem;
 
+  img {
+    width: 6.09944rem;
+    height: 1.05613rem;
+  }
 }
 
 main {
@@ -62,8 +61,6 @@ main {
   background: var(--grey-3, #212529);
   box-shadow: 0px 3.198px 31.981px -7.995px rgba(0, 0, 0, 0.25);
   padding: 1rem;
-
- 
 }
 
 .div__form {

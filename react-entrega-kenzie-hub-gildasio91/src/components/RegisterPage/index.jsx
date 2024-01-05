@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
 import { Input } from "../Input";
+import { InputPassword } from "../InputPassword";
 import styles from "./style.module.scss";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerPageSchema } from "./registerPage.schemas";
+import Logo from "../../assets/Logo.svg";
+
 
 export const RegisterPage = ({ userRegister }) => {
+
+
   const {
     reset,
     register,
@@ -24,8 +29,10 @@ export const RegisterPage = ({ userRegister }) => {
     <div className={styles.body__container}>
       <header>
         <div className={styles.div__header}>
-          <h2>Kenzie Hub</h2>
-          <Link  className={styles.btn__back} to="/">Voltar</Link>
+          <img src={Logo} alt="logo"/>
+          <Link className={styles.btn__back} to="/">
+            Voltar
+          </Link>
         </div>
       </header>
       <main>
@@ -48,16 +55,14 @@ export const RegisterPage = ({ userRegister }) => {
             {...register("email")}
             errors={errors.email}
           />
-          <Input
+          <InputPassword
             placeholder="digite sua senha"
-            type="text"
             label="Senha"
             {...register("password")}
             errors={errors.password}
           />
-          <Input
+          <InputPassword
             placeholder="confirme sua senha"
-            type="password"
             label="Confirmar Senha"
             {...register("passwordConfirm")}
             errors={errors.passwordConfirm}
