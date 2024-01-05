@@ -4,6 +4,7 @@ import { RegisterPage } from "../../components/RegisterPage";
 import { DashboardPage } from "../../components/DashboardPage";
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export const RouterMain = () => {
   const localToken = localStorage.getItem("@TOKEN");
@@ -16,7 +17,7 @@ export const RouterMain = () => {
 
   useEffect(() => {
     const loadUser = async () => {
-      if (!token) return navigate("/login");
+      if (!token) return navigate("/");
 
       try {
         const { data } = await api.get("/profile", { ...headers });
@@ -32,8 +33,28 @@ export const RouterMain = () => {
   const userRegister = async (payLoad) => {
     try {
       await api.post("/users", payLoad);
-      navigate("/dashboard");
+      toast.success("Conta criada com sucesso", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      navigate("/");
     } catch (error) {
+      toast.error("Ops, algo deu errado", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       console.log(error);
     }
   };
@@ -41,11 +62,12 @@ export const RouterMain = () => {
   const userLogin = async (payLoad) => {
     try {
       const {
-        data: { token },
+        data: { token, user },
       } = await api.post("/sessions", payLoad);
-     setToken(token);
-     localStorage.setItem("@TOKEN", token);
-     navigate("/dashboard");
+      setToken(token);
+      localStorage.setItem("@TOKEN", token);
+      setUser(user);
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -55,14 +77,20 @@ export const RouterMain = () => {
     setUser(null);
     setToken("");
     localStorage.removeItem("@TOKEN");
-    navigate("/login");
-  }
+    navigate("/");
+  };
 
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage userLogin={userLogin}/>} />
-      <Route path="/register" element={<RegisterPage userRegister={userRegister}/>}  />
-      <Route path="/dashboard" element={<DashboardPage userLogout={userLogout} />}/>
+      <Route path="/" element={<LoginPage userLogin={userLogin} />} />
+      <Route
+        path="/register"
+        element={<RegisterPage userRegister={userRegister} />}
+      />
+      <Route
+        path="/dashboard"
+        element={<DashboardPage userLogout={userLogout} user={user} />}
+      />
     </Routes>
   );
 };

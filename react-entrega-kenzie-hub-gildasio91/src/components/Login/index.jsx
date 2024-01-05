@@ -4,9 +4,10 @@ import { InputPassword } from "../InputPassword";
 import styles from "./style.module.scss";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { loginPageSchema } from "./loginPage.schemas";
+import { loginPageSchema } from "../Login/loginPage.schemas"
+import Logo from "../../assets/Logo.svg";
 
-export const LoginPage = ({userLogin}) => {
+export const LoginPage = ({ userLogin }) => {
   const {
     reset,
     handleSubmit,
@@ -21,8 +22,8 @@ export const LoginPage = ({userLogin}) => {
 
   return (
     <>
-      <main>
-        <h2>kenzie Hub</h2>
+      <main className={styles.main__container}>
+      <img src={Logo} alt="logo"></img>
         <section>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1>Login</h1>

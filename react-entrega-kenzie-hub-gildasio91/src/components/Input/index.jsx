@@ -5,8 +5,8 @@ export const Input = forwardRef(({ label, errors, ...rest }, ref) => {
   return (
     <div className={styles.inpt__container}>
       <label>{label}</label>
-      <input className={styles.inpt} ref={ref} {...rest} />
-      {errors ? <p>{errors.message}</p> : null}
+      <input className={styles.inpt__content} ref={ref} {...rest} />
+      {errors ? <p className={styles.paragraph}>{errors.message}</p> : null}
     </div>
   );
 });

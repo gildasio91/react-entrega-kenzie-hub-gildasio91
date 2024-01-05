@@ -1,18 +1,20 @@
 import styles from "./style.module.scss";
+import Logo from "../../assets/Logo.svg"
 
-export const DashboardPage = ({userLogout}) => {
+export const DashboardPage = ({userLogout, user}) => {
   return (
     <div className={styles.body__container}>
+      <div className={styles.body__content}>
       <header>
         <div>
-          <h2>kenzie hub</h2>
+          <img src={Logo} alt="logo"/>
           <button onClick={userLogout} type="submit">Sair</button>
         </div>
       </header>
       <section>
         <div>
-          <h1>{`Olá, Samuel Leão `}</h1>
-          <p>Primeiro módulo Introdução ao FrontEnd</p>
+          <h1>Olá, {user.name}</h1>
+          <p>{user.course_module}</p>
         </div>
       </section>
       <main>
@@ -24,5 +26,6 @@ export const DashboardPage = ({userLogout}) => {
         </div>
       </main>
     </div>
+      </div>
   );
 };

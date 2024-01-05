@@ -1,13 +1,27 @@
-.body__container {
+.body__container{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.body__content {
+  width: 100%;
   justify-content: flex-start;
   padding: 0;
   border-radius: 0.5rem;
   background-color: var(--grey-4, #121214);
+  
 }
 
 header {
   width: 100%;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--grey-4, #121214);
 
   div {
@@ -22,7 +36,7 @@ header {
 
 section {
   width: 100%;
-  max-width: 60rem;
+ 
   border-top: 1px solid var(--grey-0);
   border-bottom: 1px solid var(--grey-0);
   background-color: var(--grey-4, #121214);
@@ -30,13 +44,13 @@ section {
   div {
     display: flex;
     width: 100%;
-    max-width: 60rem;
+    
     height: 8.1875rem;
     padding: 0.75rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.625rem;
+    gap: 2rem;
     background-color: var(--grey-4, #121214);
     h1 {
       color: var(--grey-0, #f8f9fa);
@@ -69,7 +83,7 @@ main {
     gap: 2rem;
 
     h2 {
-      width: 18.125rem;
+      // width: 18.125rem;
       color: var(--grey-0, #f8f9fa);
       font-size: 1.125rem;
       font-style: normal;
@@ -78,7 +92,7 @@ main {
     }
 
     h3 {
-      width: 18.5625rem;
+      // width: 18.5625rem;
       color: #fff;
       font-size: 1rem;
       font-style: normal;
@@ -92,11 +106,30 @@ main {
 @media  (min-width: 768px) {
 
   section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     div {
+      max-width: 60rem;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      padding: 1rem;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      max-width: 60rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
     }
   }
 

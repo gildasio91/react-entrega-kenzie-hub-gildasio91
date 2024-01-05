@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerPageSchema } from "./registerPage.schemas";
 
-export const RegisterPage = ({userRegister}) => {
+export const RegisterPage = ({ userRegister }) => {
   const {
     reset,
     register,
@@ -21,10 +21,12 @@ export const RegisterPage = ({userRegister}) => {
   };
 
   return (
-    <>
+    <div className={styles.body__container}>
       <header>
-        <h2>Kenzie Hub</h2>
-        <Link to="/login">Voltar</Link>
+        <div className={styles.div__header}>
+          <h2>Kenzie Hub</h2>
+          <Link  className={styles.btn__back} to="/">Voltar</Link>
+        </div>
       </header>
       <main>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -96,6 +98,6 @@ export const RegisterPage = ({userRegister}) => {
           </button>
         </form>
       </main>
-    </>
+    </div>
   );
 };

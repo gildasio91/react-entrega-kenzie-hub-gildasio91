@@ -1,40 +1,40 @@
-body {
+.main__container {
   height: 100vh;
+  width: 100%;
+  max-width: 31.25rem;
   font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: var(--grey-4, #121214);
-  margin-block: auto;
-}
-
-main {
+  background: #121214;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+
   section {
     width: 100%;
     margin-top: 1rem;
     gap: 1rem;
     display: flex;
-    padding: 2.10569rem 1.103rem;
+    padding: 1.10569rem 0.5rem;
     flex-direction: column;
     align-items: center;
     border-radius: 0.20056rem;
     background: var(--grey-3, #212529);
     box-shadow: 0px 3.209px 32.087px -8.022px rgba(0, 0, 0, 0.25);
-  
+    border: none;
+
     form {
-  
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: start;
-  
       gap: 1rem;
-  
+      padding: 0;
       h1 {
         color: var(--grey-0, #f8f9fa);
         font-size: 0.90244rem;
@@ -43,15 +43,16 @@ main {
         height: 1.40381rem;
         text-align: center;
       }
-  
+
       p {
-        width: 8.52306rem;
+      
         height: 0.90244rem;
         color: var(--grey-1, #868e96);
         font-size: 0.60163rem;
         font-style: normal;
         font-weight: 600;
         line-height: 0.90244rem;
+        text-align: center;
       }
     }
   }
@@ -63,9 +64,9 @@ h2 {
 
 .btn__login {
   display: flex;
-  width: 16.24388rem;
+  width: 100%;
   height: 2.4065rem;
-  padding: 0rem 1.39588rem;
+  padding: 1.4rem 1.39588rem;
   justify-content: center;
   align-items: center;
   gap: 0.6345rem;
@@ -81,9 +82,9 @@ h2 {
 
 .btn__register {
   display: flex;
-  width: 16.24388rem;
+  width: 100%;
   height: 2.4065rem;
-  padding: 0rem 1.39588rem;
+  padding: 1.4rem 1.39588rem;
   justify-content: center;
   align-items: center;
   gap: 0.6345rem;
@@ -95,4 +96,5 @@ h2 {
   font-style: normal;
   font-weight: 500;
   line-height: 1.32331rem;
+  text-decoration: none;
 }
