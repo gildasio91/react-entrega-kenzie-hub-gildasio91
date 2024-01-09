@@ -34,17 +34,16 @@
   background: var(--grey-2, #343b41);
   padding: 0.4rem;
   color: white;
-  
+  font-size: 0.8rem;
 }
 
 ::placeholder {
   color: var(--grey-0, #f8f9fa);
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.32331rem; /* 329.929% */
-  letter-spacing: 0.16844rem;
+  
 }
 
 input:focus::placeholder {

@@ -30,6 +30,7 @@ export const LoginPage = ({ userLogin }) => {
             <Input
               placeholder="Digite seu email"
               {...register("email")}
+              label="Email"
               errors={errors.email}
             />
             <InputPassword

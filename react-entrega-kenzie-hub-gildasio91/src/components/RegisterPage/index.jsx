@@ -36,7 +36,7 @@ export const RegisterPage = ({ userRegister }) => {
         </div>
       </header>
       <main>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.form__container }  onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.div__form}>
             <h1>Crie sua Conta</h1>
             <p>Rapido e grátis, vamos nessa</p>
