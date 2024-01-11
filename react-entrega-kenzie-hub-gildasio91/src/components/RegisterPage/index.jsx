@@ -6,10 +6,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerPageSchema } from "./registerPage.schemas";
 import Logo from "../../assets/Logo.svg";
+import { useContext } from "react";
+import { UserContext } from "../../providers/UserContext";
 
-
-export const RegisterPage = ({ userRegister }) => {
-
+export const RegisterPage = () => {
+  const { userRegister } = useContext(UserContext);
 
   const {
     reset,
@@ -29,14 +30,17 @@ export const RegisterPage = ({ userRegister }) => {
     <div className={styles.body__container}>
       <header>
         <div className={styles.div__header}>
-          <img src={Logo} alt="logo"/>
+          <img src={Logo} alt="logo" />
           <Link className={styles.btn__back} to="/">
             Voltar
           </Link>
         </div>
       </header>
       <main>
-        <form className={styles.form__container }  onSubmit={handleSubmit(onSubmit)}>
+        <form
+          className={styles.form__container}
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div className={styles.div__form}>
             <h1>Crie sua Conta</h1>
             <p>Rapido e grátis, vamos nessa</p>

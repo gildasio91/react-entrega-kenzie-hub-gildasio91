@@ -6,8 +6,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginPageSchema } from "../Login/loginPage.schemas"
 import Logo from "../../assets/Logo.svg";
+import { useContext } from "react";
+import { UserContext } from "../../providers/UserContext";
 
-export const LoginPage = ({ userLogin }) => {
+export const LoginPage = () => {
+  const {userLogin} = useContext(UserContext);
+
   const {
     reset,
     handleSubmit,
