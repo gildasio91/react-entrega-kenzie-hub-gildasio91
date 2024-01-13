@@ -1,0 +1,17 @@
+.ul__container {
+  width: 100%;
+  max-width: 60rem;
+  border-radius: 0.25rem;
+  background: #212529;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .ul__container {
+        width: 60rem;
+        margin: 0 auto;
+    }
+}

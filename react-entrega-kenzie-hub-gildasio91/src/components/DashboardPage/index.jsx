@@ -1,10 +1,16 @@
 import styles from "./style.module.scss";
 import Logo from "../../assets/Logo.svg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../providers/UserContext";
+import { TechList } from "../TechList";
+import { IoIosAdd } from "react-icons/io";
+import { CreateTechModal } from "../CreateTechModal";
+import { EditTechModal} from "../EditTechModal";
+import { TechContext } from "../../providers/TechContext";
 
 export const DashboardPage = () => {
   const { userLogout, user } = useContext(UserContext);
+const {setIsOpenCreate,isOpenCreate,isOpenEdit} = useContext(TechContext);
 
   return (
     <div className={styles.body__container}>
@@ -25,11 +31,13 @@ export const DashboardPage = () => {
         </section>
         <main>
           <div>
-            <h2>Que pena! Estamos em desenvolvimento :</h2>
-            <h3>
-              Nossa aplicação está em desenvolvimento, em breve teremos
-              novidades
-            </h3>
+            <div className={styles.main__header}>
+              <p>Tecnologias</p>
+              <button onClick={() => setIsOpenCreate(true)}><IoIosAdd size={30} /></button>
+            </div>
+            {isOpenCreate ? <CreateTechModal  /> : null}
+            <TechList />
+            {isOpenEdit ? <EditTechModal /> : null}
           </div>
         </main>
       </div>
