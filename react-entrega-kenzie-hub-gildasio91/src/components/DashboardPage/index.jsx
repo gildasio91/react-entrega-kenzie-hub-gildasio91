@@ -5,12 +5,13 @@ import { UserContext } from "../../providers/UserContext";
 import { TechList } from "../TechList";
 import { IoIosAdd } from "react-icons/io";
 import { CreateTechModal } from "../CreateTechModal";
-import { EditTechModal} from "../EditTechModal";
+import { EditTechModal } from "../EditTechModal";
 import { TechContext } from "../../providers/TechContext";
 
 export const DashboardPage = () => {
   const { userLogout, user } = useContext(UserContext);
-const {setIsOpenCreate,isOpenCreate,isOpenEdit, editingTech} = useContext(TechContext);
+  const { setIsOpenCreate, isOpenCreate, editingTech } =
+    useContext(TechContext);
 
   return (
     <div className={styles.body__container}>
@@ -33,9 +34,11 @@ const {setIsOpenCreate,isOpenCreate,isOpenEdit, editingTech} = useContext(TechCo
           <div>
             <div className={styles.main__header}>
               <p>Tecnologias</p>
-              <button onClick={() => setIsOpenCreate(true)}><IoIosAdd size={30} /></button>
+              <button onClick={() => setIsOpenCreate(true)}>
+                <IoIosAdd size={30} />
+              </button>
             </div>
-            {isOpenCreate ? <CreateTechModal  /> : null}
+            {isOpenCreate ? <CreateTechModal /> : null}
             <TechList />
             {editingTech ? <EditTechModal /> : null}
           </div>
