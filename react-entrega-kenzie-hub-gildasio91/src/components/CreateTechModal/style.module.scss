@@ -38,6 +38,22 @@
   gap: 0.5rem;
   border-radius: 0.20056rem 0.20056rem 0rem 0rem;
   background: var(--grey-2, #343b41);
+  p {
+    color: var(--grey-0, #f8f9fa);
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+  button {
+    color: var(--grey-1, #868e96);
+    background: var(--grey-2, #343b41);
+    border: none;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.625rem;
+  }
 }
 
 .modal__content {

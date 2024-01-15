@@ -5,7 +5,8 @@ import { TechContext } from "../../../providers/TechContext";
 
 
 export const TechCard = ({tech}) => {
-  const { setIsOpenEdit } = useContext(TechContext);
+  const {  deleteTech, setEditingTech,setIsOpenEdit} = useContext(TechContext);
+  
   
   return (
     <>
@@ -15,10 +16,10 @@ export const TechCard = ({tech}) => {
           <p>{tech.status}</p>
         </div>
         <div className={styles.edit__container}>
-          <button onClick={() => setIsOpenEdit(true)}>
+          <button onClick={() => {setEditingTech(tech), setIsOpenEdit(true)}}>
             <MdEdit />
           </button>
-          <button>
+          <button onClick={() => deleteTech(tech)}>
             <MdDelete />
           </button>
         </div>
