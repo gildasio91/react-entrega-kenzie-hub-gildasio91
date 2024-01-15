@@ -6,11 +6,11 @@ import { useContext } from "react";
 import { TechContext } from "../../providers/TechContext";
 
 export const EditTechModal = () => {
-  const { modalEditRef,  setIsOpenEdit, updateTech, editingTech } =
+  const { modalEditRef,  setIsOpenEdit, updateTech, editingTech, setEditingTech } =
     useContext(TechContext);
 
   const { handleSubmit, register } = useForm({
-    values: { name: editingTech.name, status: editingTech.status },
+    values: { status: editingTech.status },
   });
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export const EditTechModal = () => {
   }, []);
 
   const submit = (formData) => {
-    updateTech(formData.id);
+    updateTech(formData);
   };
 
   return (
@@ -38,12 +38,12 @@ export const EditTechModal = () => {
       >
         <div className={styles.modal__header}>
           <p>Tecnologia detalhes</p>
-          <button onClick={() => setIsOpenEdit(false)}>X</button>
+          <button onClick={() => setEditingTech(null)}>X</button>
         </div>
         <div className={styles.modal__content}>
           <Input
             label="Nome do projeto"
-            placeholder="Material Ul"
+            placeholder={editingTech.name}
             {...register("name")}
           />
           <label className={styles.label}>Status</label>

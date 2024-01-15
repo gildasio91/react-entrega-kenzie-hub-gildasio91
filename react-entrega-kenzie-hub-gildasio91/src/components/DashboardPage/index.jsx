@@ -10,7 +10,7 @@ import { TechContext } from "../../providers/TechContext";
 
 export const DashboardPage = () => {
   const { userLogout, user } = useContext(UserContext);
-const {setIsOpenCreate,isOpenCreate,isOpenEdit} = useContext(TechContext);
+const {setIsOpenCreate,isOpenCreate,isOpenEdit, editingTech} = useContext(TechContext);
 
   return (
     <div className={styles.body__container}>
@@ -37,7 +37,7 @@ const {setIsOpenCreate,isOpenCreate,isOpenEdit} = useContext(TechContext);
             </div>
             {isOpenCreate ? <CreateTechModal  /> : null}
             <TechList />
-            {isOpenEdit ? <EditTechModal /> : null}
+            {editingTech ? <EditTechModal /> : null}
           </div>
         </main>
       </div>
