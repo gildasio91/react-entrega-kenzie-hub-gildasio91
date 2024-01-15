@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styles from "./style.module.scss";
-import { MdEdit, MdDelete } from "react-icons/md";
+import { MdOutlineModeEdit} from "react-icons/md";
+import { FaRegTrashAlt } from "react-icons/fa";
 import { TechContext } from "../../../providers/TechContext";
 
 
@@ -17,10 +18,10 @@ export const TechCard = ({tech}) => {
         </div>
         <div className={styles.edit__container}>
           <button onClick={() => {setEditingTech(tech), console.log(tech)} }>
-            <MdEdit />
+          <MdOutlineModeEdit />
           </button>
           <button onClick={() => deleteTech(tech)}>
-            <MdDelete />
+          <FaRegTrashAlt />
           </button>
         </div>
       </li>

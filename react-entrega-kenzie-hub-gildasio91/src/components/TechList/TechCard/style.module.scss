@@ -34,6 +34,12 @@
     padding: 0.5rem;
     gap: 0.5rem;
     color: white;
+
+    button {
+      background: #121214;
+      border: none;
+      color: white;
+    }
 }
 
 @media (min-width: 768px) {
